@@ -16,6 +16,9 @@ type MyEvent struct {
 
 }
 
+// see https://golang.org/pkg/encoding/json/#Marshal for more information on formatting options
+// this shows an example of omitting a field if it is empty
+// puls a 'control group' of an EmptyField to show default handling
 type MyResponse struct {
 	Code string `json:"code,omitempty"`
 	Message string `json:"answer"`
