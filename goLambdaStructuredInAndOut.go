@@ -19,7 +19,9 @@ type MyEvent struct {
 type MyResponse struct {
 	Code string `json:"code,omitempty"`
 	Message string `json:"answer"`
+	EmptyField string `json:"emptyfield"`
 }
+
 
 func HandleLambdaEvent(event MyEvent) (MyResponse, error) {
 	if (event.Age == 50) {
